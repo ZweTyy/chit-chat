@@ -1,0 +1,8 @@
+2025/10/29 23:24:46 Starting client bob...
+[Prev: 1, Time: 3] Server: bob has joined the chat
+[Prev: 4, Time: 6] Server: <alice>: Hejsa!
+Ses
+[Prev: 8, Time: 9] Server: <bob>: Ses
+/leave
+You left the chat.
+Connection closed: rpc error: code = Canceled desc = context canceled

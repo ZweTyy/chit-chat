@@ -1,0 +1,8 @@
+2025/10/29 23:24:31 Starting Server...
+2025/10/29 23:24:31 Listening on port: 50051
+2025/10/29 23:24:41 [Time: 2] alice: alice has joined the chat
+2025/10/29 23:24:46 [Time: 3] bob: bob has joined the chat
+2025/10/29 23:24:50 [Time: 6] alice: <alice>: Hejsa!
+2025/10/29 23:24:56 [Time: 9] bob: <bob>: Ses
+2025/10/29 23:24:58 [Time: 12] bob: bob has left the chat
+2025/10/29 23:25:08 Shutting down…
