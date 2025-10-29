@@ -1,0 +1,53 @@
+syntax = "proto3";
+package chitchat;
+
+
+option go_package = "github.com/ZweTyy/chit-chat/grpc;chitchat";
+
+message LogicalTime {
+int64 t = 1;
+}
+
+
+enum ClientEventType {
+CLIENT_EVENT_TYPE_UNSPECIFIED = 0;
+CLIENT_EVENT_TYPE_JOIN = 1;
+CLIENT_EVENT_TYPE_CHAT = 2;
+CLIENT_EVENT_TYPE_LEAVE = 3;
+}
+
+
+enum ServerEventType {
+SERVER_EVENT_TYPE_UNSPECIFIED = 0;
+SERVER_EVENT_TYPE_SYSTEM = 1;
+SERVER_EVENT_TYPE_CHAT = 2; 
+}
+
+
+message ClientEvent {
+ClientEventType type = 1;
+string client_id = 2; 
+string display_name = 3;
+string content = 4;
+LogicalTime logical_time = 5;
+}
+
+
+message ServerEvent {
+ServerEventType type = 1;
+string client_id = 2;
+string display_name = 3;
+string content = 4;
+LogicalTime logical_time = 5; 
+}
+
+
+message Welcome {
+string assigned_client_id = 1;
+LogicalTime server_time = 2; 
+}
+
+
+service ChitChat {
+rpc Chat(stream ClientEvent) returns (stream ServerEvent);
+}
